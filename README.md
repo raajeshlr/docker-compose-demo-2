@@ -1,33 +1,6 @@
 In this repo, I used docker-compose to run python and mysql.
 
-### docker-compose.yml
-
-version: "3"
-services:
-  app:
-​    build:
-​      context: ./app
-​    ports:
-
-      - "5000:5000"
-        depends_on:
-            - db
-
-  db:
-​    image: mysql:5.7
-​    ports:
-​      - "3306:3306"
-​    environment:
-​      MYSQL_ROOT_PASSWORD: root
-​    volumes:
-​      - mysql:/var/lib/mysql
-​      - mysql_config:/etc/mysql
-
-volumes:
-  mysql:
-  mysql_config:
-
-
+### Refer docker-compose.yml
 
 When you do : “docker compose up” command in the directory.
 
